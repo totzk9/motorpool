@@ -1,0 +1,56 @@
+<!-- register modal -->
+ <div class="w3-container">
+  <div id="regModal" class="w3-modal">
+   <div class="w3-modal-content w3-animate-opacity w3-card-8">
+
+    <header class="w3-container w3-red">
+     <span onclick="document.getElementById('regModal').style.display='none'" class="w3-closebtn">&times;</span>
+     <h2>Register</h2>
+    </header>
+
+   <div class="w3-container">
+    <form name="regForm" novalidate>
+      <br>
+      <div class="w3-row-padding" >
+       <div class="w3-third" ng-class="{ 'has-error' : regForm.fname.$invalid && !regForm.fname.$pristine }">
+        <label class="w3-label w3-text-black">First name:</label>
+        <input class="w3-input w3-border w3-round" type="text" ng-model="fname" required>
+        <span ng-show="regForm.fname.$error.required && !regForm.fname.$pristine" class="help-block">First name is required</span>
+       </div>
+
+       <div class="w3-third">
+        <label class="w3-label w3-text-black">Middle name:</label>
+        <input class="w3-input w3-border w3-round" type="text">
+       </div>
+
+      <div class="w3-third">
+       <label class="w3-label w3-text-black">Last name:</label>
+       <input class="w3-input w3-border w3-round" type="text">
+      </div>
+      <br><br><br>
+
+      <div class="w3-half" ng-class="{ 'has-error' : regForm.uname.$invalid && !regForm.uname.$pristine }">
+       <label class="w3-label w3-text-black">Username:</label>
+       <input class="w3-input w3-border w3-round" type="text" ng-model="uname" required="">
+       <span ng-show="regForm.uname.$error.required && !regForm.uname.$pristine" class="help-block">First name is required</span>
+      </div>
+
+     <div class="w3-half">
+      <label class="w3-label w3-text-black">Password:</label>
+      <input class="w3-input w3-border w3-round" type="password">
+     </div>
+
+     </div>
+    </form>
+   </div>
+
+  <footer class="w3-container w3-red" style="height: 50px; padding-top: 8px;">
+    <div class="buttons">
+      <button type="button" name="regbtn" class="w3-btn w3-dark-grey" ng-disabled="regForm.$invalid">REGISTER</button>
+      <button type="button" name="cancelbtn" class="w3-btn w3-dark-grey">CANCEL</button>
+    </div>
+  </footer>
+
+ </div>
+</div>
+</div>

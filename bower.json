@@ -1,0 +1,8 @@
+{
+  "name": "motorpool_online_vehicle_monitoring_system",
+  "dependencies": {
+    "angular": "angularjs#^1.5.9",
+    "angular-route": "^1.5.9",
+    "bootstrap": "^3.3.7"
+  }
+}

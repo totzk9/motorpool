@@ -1,0 +1,38 @@
+<!-- navbar -->
+  <div ng-include src="'partials/navbar.html'"></div>
+  <br>
+
+  <div ng-include src="'partials/modals/register.html'"></div>
+  
+  <!-- login form -->
+    <form class="w3-container w3-card-12 w3-white login" name="logForm">
+      <br>
+      <div class="w3-center">
+        <img src="assets\logo.png" alt="">
+      </div>
+
+      <h1 class="w3-text-black w3-center">LOGIN</h1>
+      <hr>
+
+      <div class="w3-group" ng-class="{ 'has-error' : logForm.uname.$invalid && !logForm.uname.$pristine }">
+         <label class="w3-label w3-text-black">User Name</label>
+         <input class="w3-input w3-border w3-round" type="text" style="width:100%" name="uname" ng-model="uname" required>
+         <span ng-show="logFoem.uname.$error.required && !logForm.uname.$pristine" class="help-block">First name is required</span>
+      </div>
+      <div class="w3-group">
+         <label class="w3-label w3-text-black">Password</label>
+         <input class="w3-input w3-border w3-round" type="password" style="width:100%" required>
+      </div>
+      <div class="w3-center">
+        <a name="button" class="w3-btn-block w3-red btnlog" href="#/home">LOGIN</a>
+      </div>
+      <hr>
+      <div class="w3-center fp">
+        <a href="">Forgot Password?</a>
+      </div>
+    </form>
+    <br>
+    <!-- end of login form -->
+
+    <!-- footer -->
+    <div ng-include src="'partials/footer.html'"></div>

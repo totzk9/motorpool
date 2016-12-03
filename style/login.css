@@ -1,0 +1,49 @@
+/*styling*/
+
+.login>div>img
+{
+  width:100%;
+  max-width:120px;
+  padding-left: -50px;
+}
+body
+{
+  font-family: "Century Gothic";
+}
+.login
+{
+  height: 550px;
+  margin: auto;
+  width: 50%;
+}
+.btnlog
+{
+  background-color: #5d9ce2;
+}
+footer>p
+{
+  font-size: 10px;
+}
+footer
+{
+  margin-top: 30px;
+}
+.link
+{
+  float: right;
+  display: flex;
+  cursor: default;
+}
+.fp:hover
+{
+  color: red;
+}
+.buttons
+{
+  float: right;
+}
+
+/*nav>span
+{
+  font-family: "Century Gothic";
+}*/
