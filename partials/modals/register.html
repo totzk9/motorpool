@@ -14,30 +14,33 @@
       <div class="w3-row-padding" >
        <div class="w3-third" ng-class="{ 'has-error' : regForm.fname.$invalid && !regForm.fname.$pristine }">
         <label class="w3-label w3-text-black">First name:</label>
-        <input class="w3-input w3-border w3-round" type="text" ng-model="fname" required>
+        <input class="w3-input w3-border w3-round " type="text" ng-model="fname" required>
         <span ng-show="regForm.fname.$error.required && !regForm.fname.$pristine" class="help-block">First name is required</span>
        </div>
 
-       <div class="w3-third">
+       <div class="w3-third" ng-class="{ 'has-error' : regForm.midname.$invalid && !regForm.midname.$pristine }">
         <label class="w3-label w3-text-black">Middle name:</label>
-        <input class="w3-input w3-border w3-round" type="text">
+        <input class="w3-input w3-border w3-round" type="text" name="midname" ng-model="midname" required>
+        <span ng-show="regForm.midname.$error.required && !regForm.midname.$pristine" class="help-block">Middle name is required</span>
        </div>
 
-      <div class="w3-third">
+      <div class="w3-third" ng-class="{ 'has-error' : regForm.lname.$invalid && !regForm.lname.$pristine }">
        <label class="w3-label w3-text-black">Last name:</label>
-       <input class="w3-input w3-border w3-round" type="text">
+       <input class="w3-input w3-border w3-round" type="text" name="lname" ng-model="lname" required>
+       <span ng-show="regForm.midname.$error.required && !regForm.midname.$pristine" class="help-block">Last name is required</span>
       </div>
       <br><br><br>
 
       <div class="w3-half" ng-class="{ 'has-error' : regForm.uname.$invalid && !regForm.uname.$pristine }">
        <label class="w3-label w3-text-black">Username:</label>
-       <input class="w3-input w3-border w3-round" type="text" ng-model="uname" required="">
-       <span ng-show="regForm.uname.$error.required && !regForm.uname.$pristine" class="help-block">First name is required</span>
+       <input class="w3-input w3-border w3-round" type="text" name="uname" ng-model="uname" required="">
+       <span ng-show="regForm.uname.$error.required && !regForm.uname.$pristine" class="help-block">Username is required</span>
       </div>
 
-     <div class="w3-half">
+     <div class="w3-half" ng-class="{ 'has-error' : regForm.pass.$invalid && !regForm.pass.$pristine }">
       <label class="w3-label w3-text-black">Password:</label>
-      <input class="w3-input w3-border w3-round" type="password">
+      <input class="w3-input w3-border w3-round" type="password" name="pass" ng-model="pass">
+      <span ng-show="regForm.pass.$error.required && !regForm.pass.$pristine" class="help-block">Password is required</span>
      </div>
 
      </div>
