@@ -14,8 +14,8 @@
       <div class="w3-row-padding" >
        <div class="w3-third" ng-class="{ 'has-error' : regForm.fname.$invalid && !regForm.fname.$pristine }">
         <label class="w3-label w3-text-black">First name:</label>
-        <input class="w3-input w3-border w3-round " type="text" ng-model="fname" required>
-        <span ng-show="regForm.fname.$error.required && !regForm.fname.$pristine" class="help-block">First name is required</span>
+        <input class="w3-input w3-border w3-round " type="text" ng-model="fname" name="fname" required>
+        <span ng-show="regForm.fname.$error.required && regForm.fname.$dirty" class="help-block">First name is required</span>
        </div>
 
        <div class="w3-third" ng-class="{ 'has-error' : regForm.midname.$invalid && !regForm.midname.$pristine }">

@@ -3,7 +3,7 @@
   <br>
 
   <div ng-include src="'partials/modals/register.html'"></div>
-  
+
   <!-- login form -->
     <form class="w3-container w3-card-12 w3-white login" name="logForm">
       <br>
@@ -17,7 +17,7 @@
       <div class="w3-group" ng-class="{ 'has-error' : logForm.uname.$invalid && !logForm.uname.$pristine }">
          <label class="w3-label w3-text-black">User Name</label>
          <input class="w3-input w3-border w3-round" type="text" style="width:100%" name="uname" ng-model="uname" required>
-         <span ng-show="logFoem.uname.$error.required && !logForm.uname.$pristine" class="help-block">First name is required</span>
+         <span ng-show="logForm.uname.$error.required && logForm.uname.$dirty" class="help-block">First name is required</span>
       </div>
       <div class="w3-group">
          <label class="w3-label w3-text-black">Password</label>
