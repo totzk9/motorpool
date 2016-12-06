@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<title>Motorpool Overview</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="w3.css">
+	<style>
+		html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+	</style>
+	<body class="w3-white">
+
+		<!-- Top container -->
+		<div class="w3-container w3-top w3-black w3-large w3-padding" style="z-index:4">
+		  <button class="w3-btn w3-hide-large w3-padding-0 w3-hover-text-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+		  <span class="w3-right" style="font-family:Stencil">Motorpool</span>
+		</div>
+
+		<!-- Sidenav/menu -->
+		<nav class="w3-sidenav w3-collapse w3-light-grey w3-animate-left" style="z-index:3;width:300px;" id="mySidenav"><br>
+		  <div class="w3-container w3-row">
+			<div class="w3-center">
+			  <span>Welcome, <strong>DIRI PANGAN</strong></span><br>
+			</div>
+		  </div>
+		  <hr>
+		  <div class="w3-container">
+			<h5>Dashboard</h5>
+		  </div>
+		  <a href="#" class="w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+		  <a href="#" class="w3-padding w3-blue">  Overview</a>
+		  <a href="#" class="w3-padding"> Orders</a>
+		  <a href="addform.html" class="w3-padding"> Inventory</a>
+		  <a href="#" class="w3-padding"> History</a>
+		</nav>
+
+
+		<!-- Overlay effect when opening sidenav on small screens -->
+		<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+		<!-- !PAGE CONTENT! -->
+		<div class="w3-main" style="margin-left:300px;margin-top:43px;margin-bottom:20px">
+
+		  <!-- Header -->
+		  <header class="w3-container" style="padding-top:22px">
+			<h4><i class="fa fa-dashboard"></i> Brands</h4>
+		  </header>
+
+		  <div class="w3-container">
+			<div class="w3-quarter">
+			  <div class="w3-container w3-red w3-padding-16">
+
+				<div class="w3-right">
+				  <h3>52</h3>
+				</div>
+				<h4>Brand1</h4>
+			  </div>
+			</div>
+			<div class="w3-quarter">
+			  <div class="w3-container w3-blue w3-padding-16">
+				<div class="w3-right">
+				  <h3>99</h3>
+				</div>
+				<h4>Brand2</h4>
+			  </div>
+			</div>
+			<div class="w3-quarter">
+			  <div class="w3-container w3-teal w3-padding-16">
+				<div class="w3-right">
+				  <h3>23</h3>
+				</div>
+				<h4>Brand3</h4>
+			  </div>
+			</div>
+			<div class="w3-quarter">
+			  <div class="w3-container w3-orange w3-text-white w3-padding-16">
+				<div class="w3-right">
+				  <h3>50</h3>
+				</div>
+				<h4>Brand4</h4>
+			  </div>
+			</div>
+			  <br>
+			<button class="w3-btn" style="margin-top: 17px;">More Brands  <i class="fa fa-arrow-right"></i></button>
+		  </div>
+
+		  <hr>
+
+		  <div class="w3-container">
+
+			<h5>Parts</h5>
+			<p>Quantity</p>
+			<div class="w3-progress-container w3-grey">
+			  <div id="myBar" class="w3-progressbar w3-green" style="width:100%">
+				<div class="w3-center w3-text-white">999</div>
+			  </div>
+			</div>
+
+			<p>Stock</p>
+			<div class="w3-progress-container w3-grey">
+			  <div id="myBar2" class="w3-progressbar w3-orange">
+				<div class="w3-center w3-text-white">899</div>
+			  </div>
+			</div>
+
+			<script>
+			var percentage = calcPercentage(899,999);
+			document.getElementById("myBar2").style.width = percentage;
+			function calcPercentage(a,b){
+				var x = 100 * (a/b)
+				return x+"%"
+			}
+			</script>
+
+			<p>Used</p>
+			<div class="w3-progress-container w3-grey">
+			  <div id="myBar3" class="w3-progressbar w3-red">
+				<div class="w3-center w3-text-white">100</div>
+			  </div>
+			</div>
+			<form class="button" action="index.html" method="function">
+				<button type="button" name="button">CHURVANESS</button>
+			</form>
+			<script>
+			var percentage = calcPercentage(100,999);
+			document.getElementById("myBar3").style.width = percentage;
+			function calcPercentage(a,b){
+				var x = 100 * (a/b)
+				return x+"%"
+			}
+			</script>
+		  </div>
+
+		  <hr>
+		  <div class="w3-container">
+			<h5>Parts (Select brand)</h5>
+			<table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
+			  <tr>
+				<td>engine</td>
+				<td>65</td>
+			  </tr>
+			  <tr>
+				<td>ligid</td>
+				<td>15</td>
+			  </tr>
+			  <tr>
+				<td>makina</td>
+				<td>5</td>
+			  </tr>
+			  <tr>
+				<td>headlights</td>
+				<td>2</td>
+			  </tr>
+			  <tr>
+				<td>lingkoranan</td>
+				<td>1</td>
+			  </tr>
+			  <tr>
+				<td>tambutso</td>
+				<td>1</td>
+			  </tr>
+			</table><br>
+			<button class="w3-btn">More Parts  <i class="fa fa-arrow-right"></i></button>
+		  </div>
+		</div>
+	</body>
+</html>

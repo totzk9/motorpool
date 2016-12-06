@@ -1,0 +1,86 @@
+ <!DOCTYPE html>
+<html>
+	<link rel="stylesheet" href="w3.css">
+	<script src="angularJS/angular.min.js"></script>
+	<style>
+		html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+	</style>
+	<body  ng-app="inventory" ng-controller="userCtrl">
+		<!-- Top container -->
+		<div class="w3-container w3-top w3-black w3-large w3-padding" style="z-index:4">
+		  <button class="w3-btn w3-hide-large w3-padding-0 w3-hover-text-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+		  <span class="w3-right" style="font-family:Stencil">Motorpool</span>
+		</div>
+		<!-- Sidenav/menu -->
+		<nav class="w3-sidenav w3-collapse w3-light-grey w3-animate-left" style="z-index:3;width:300px;" id="mySidenav"><br>
+		  <div class="w3-container w3-row">
+			<div class="w3-center">
+			  <span>Welcome, <strong>DIRI PANGAN</strong></span><br>
+			</div>
+		  </div>
+		  <hr>
+		  <div class="w3-container">
+			<h5>Dashboard</h5>
+		  </div>
+		  <a href="#" class="w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+		  <a href="motorpoollolo.html" class="w3-padding">  Overview</a>
+		  <a href="#" class="w3-padding"> Orders</a>
+		  <a href="#" class="w3-padding w3-blue"> Inventory</a>
+		  <a href="#" class="w3-padding"> History</a>
+		</nav>
+
+
+		<!-- Overlay effect when opening sidenav on small screens -->
+		<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+		<!-- !PAGE CONTENT! -->
+		<div class="w3-main" style="margin-left:300px;margin-top:43px;margin-bottom:20px">
+		
+			<header class="w3-container" style="padding-top:22px">
+				<h4><i class="fa fa-dashboard"></i>Inventory</h4>
+			 </header>
+			<div class="w3-container">
+				<table class="w3-table w3-bordered w3-striped">
+				  <tr>
+						<th>Edit</th>
+						<th>SupplyID</th>
+						<th>Description</th>
+						<th>Order no.</th>
+						<th>Brand</th>
+					</tr>
+					<tr ng-repeat="user in users">
+						<td>
+							<button class="w3-btn w3-ripple" ng-click="editInventory(user.id)">Edit</button>
+						</td>
+						<td>{{ user.supplyid }}</td>
+						<td>{{ user.desc }}</td>
+						<td>{{ user.orderno }}</td>
+						<td>{{ user.brand }}</td>
+					</tr>
+				</table>
+				<br>
+				<button class="w3-btn w3-green w3-ripple" ng-click="editInventory('new')">Add Inventory</button>
+
+				<form ng-hide="hideform">
+					<h3 ng-show="edit">Add Inventory:</h3>
+					<h3 ng-hide="edit">Edit Inventory:</h3>
+						<label>Supply ID:</label>
+						<input class="w3-input w3-border" type="text" ng-model="supplyid" ng-disabled="!edit" placeholder="Supply ID">
+					<br>
+						<label>Description:</label>
+						<input class="w3-input w3-border" type="text" ng-model="desc" placeholder="Description">
+					<br>
+						<label>Order no.:</label>
+						<input class="w3-input w3-border" type="text" ng-model="orderno" placeholder="Order no.">
+					<br>
+						<label>Brand:</label>
+						<input class="w3-input w3-border" type="text" ng-model="brand" placeholder="Brand">
+					<br>
+					<button class="w3-btn w3-green w3-ripple" ng-disabled="error || incomplete">Save</button>
+				</form>
+			</div>
+		</div>
+		<script src= "myUsers.js"></script>
+
+	</body>
+</html>
